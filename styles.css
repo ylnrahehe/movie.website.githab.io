@@ -1,0 +1,536 @@
+:root {
+    --color-bg: linear-gradient(150deg, #2c003e, #000000);
+    --color-body: white;
+    --color-header: black;
+    --color-nava: white;
+    --color-h1: #d8b4ff;
+    --color-h2: #d8b4ff;
+    --color-p: #d8b4ff;
+    --color-scoresdiv: rgba(255, 150, 200, 0.1);
+    --color-table: rgba(255, 255, 255, 0.1);
+    --color-th: white;
+    --color-hoverh2: #ffccff;
+    --color-footer: rgba(0, 0, 0, 0.9);
+    --color-footerp: white;
+}
+.lightstyle {
+    --color-bg: linear-gradient(150deg, #d8b4ff, #f5f5f5);
+    --color-body: black;
+    --color-header: white;
+    --color-nava: black;
+    --color-h1: #3c003e;
+    --color-h2: #3c003e;
+    --color-p: #3c003e;
+    --color-scoresdiv: rgba(255, 150, 200, 0.1);
+    --color-table: rgba(255, 255, 255, 0.1);
+    --color-th: black;
+    --color-hoverh2: #ffccff;
+    --color-footer: #d8b4ff;
+    --color-footerp: black;
+}
+
+.theme-toggle {
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle.dark-mode {
+    background-color: white;
+    color: black;
+}
+
+.theme-toggle.light-mode {
+    background-color: black;
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", monospace;
+    background: var(--color-bg);
+    color: var(--color-body);
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--color-header);
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a {
+    color: var(--color-nava);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+}
+
+nav a:hover {
+    background-color: #4a004e;
+    border-radius: 5px;
+}
+
+h1 {
+    color: var(--color-h1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--color-h2);
+    display: flex;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: var(--color-p);
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto  ;
+}
+
+.scores {
+    margin-top: 20px;
+}
+
+.scores div {
+    background-color: var(--color-scoresdiv);
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    background-color: var(--color-table);
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #444;
+}
+
+th {
+    color: var(--color-th);
+}
+
+.carousel-top {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.carousel-bottom {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.carousel-top div, .carousel-bottom div {
+    margin: 0;
+    display: inline-flex;
+}
+
+.carousel-top img {
+    width: 150px;
+    height: 222px;
+    margin-right: -65px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-bottom img {
+    width: 150px;
+    height: 222px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-top img:hover, .carousel-bottom img:hover {
+    transform: scale(1.2);
+}
+
+#movies-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    background-color: #3c003e;
+    border: 1px solid darkslateblue;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 8px rgba(255, 150, 200, 0.1);
+}
+
+.movie-card h2 {
+    font-size: 1.5em;
+    color: #d8b4ff;
+    padding: 15px 10px;
+    background: linear-gradient(135deg, #2c003e, #4a004e);
+}
+
+.movie-card p {
+    font-size: 1em;
+    color: #f5f5f5;
+    padding: 10px 15px;
+    background-color: #2c003e;
+    line-height: 1.5;
+}
+
+.movie-card p strong {
+    color: #f5f5f5;
+}
+
+.movie-card:hover h2 {
+    color: var(--color-hoverh2);
+}
+
+.accordion-button {
+    background-color: rgba(60, 0, 62, 0.9);
+    border: 1px solid #444;
+    color: #d8b4ff;
+    text-align: left;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: max-height 0.4s ease, padding 0.4s ease;}
+
+.accordion-button:hover {
+    background-color: rgba(70, 0, 74, 0.8);
+    color: white;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #2c003e;
+    margin-top: -1px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;}
+
+.accordion-content.show {
+    display: block;
+    max-height: 300px;
+    padding: 15px;
+}
+
+
+.movie-poster {
+    float: left;
+    margin-right: 20px;
+    width: 300px;
+}
+
+.movie-details {
+    margin-top: 20px;
+}
+
+.review-card, .new-card {
+    border: 1px solid darkslateblue;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #3c003e;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover, .new-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.review-header, .new-header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+.review-photo, .new-photo {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+.review-name, .new-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.review-date, .new-date {
+    color: #666;
+}
+
+.review-text, .new-text {
+    padding: 16px;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: whitesmoke;
+    font-style: italic;
+}
+
+#popupForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: purple;
+    padding: 20px;
+    border: 2px solid #ccc;
+    z-index: 1000;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#popupOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.close-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+.popup-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.profile, .new-grid {
+    text-align: center;
+}
+
+.profile table {
+    margin: 0 auto;
+}
+
+.review-cards, .new-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-footer);
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+    color: var(--color-footerp);
+}
+
+@media (max-width: 768px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 8px;
+        text-align: center;
+        display: block;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .scores {
+        font-size: 1em;
+    }
+
+    table, th, td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .carousel-top, .carousel-bottom {
+        padding: 10px;
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+
+    .carousel-top img, .carousel-bottom img {
+        width: 100px;
+        height: 162px;
+        margin-right: 10px;
+    }
+
+
+    #movies-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .movie-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .movie-card h2 {
+        font-size: 1.3em;
+        padding: 10px;
+    }
+
+    .movie-card p {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .accordion-button {
+        font-size: 1.1em;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .accordion-content {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .movie-poster {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin: 0;
+    }
+
+    .movie-details {
+        margin-top: 15px;
+    }
+
+    .review-card, .new-card {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .review-header, .new-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .review-photo, .new-photo {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .review-name, .new-name {
+        font-size: 1.1em;
+    }
+
+    .review-text, .new-text {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    #popupForm {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .popup-btn {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+
+    .profile table {
+        width: 100%;
+    }
+
+    .review-cards, .new-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+}
+
