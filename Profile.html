@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Page </title>
+    <link rel="stylesheet" href="styles.css">
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Home.html">Movies</a>
+            <a class="nav-link" href="Shows.html">Shows</a>
+            <a class="nav-link" href="login.html">Login</a>
+            <a class="nav-link" href="Profile.html">Profile</a>
+            <button id="theme-toggle" class="theme-toggle">Light/Dark Mode</button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <hr> <h1>Profile page</h1> <hr>
+    <section class="profile">
+        <h3><strong>Name:</strong> <span id="user-name"></span></h3>
+        <h3><strong>Email:</strong> <span id="user-email"></span></h3>
+    </section>
+
+    <section>
+        <hr> <h1>My Favorites</h1> <hr>
+        <div class="carousel carousel-top">
+            <figure> <img src="images/fight club.jpeg" alt="Fight Poster"> </figure>
+            <figure> <img src="images/stranger things.jpeg" alt="Stranger Poster"> </figure>
+            <figure> <img src="images/interstellar.jpeg" alt="Stranger Poster"> </figure>
+            <figure> <img src="images/titanic.jpeg" alt="Stranger Poster"> </figure>
+            <figure> <img src="images/green book.jpeg" alt="Stranger Poster"> </figure>
+            <figure> <img src="images/karate kid.jpeg" alt="Stranger Poster"> </figure>
+            <figure> <img src="images/game.jpeg" alt="Stranger Poster"> </figure>
+            <figure> <img src="images/sherlock.jpeg" alt="Stranger Poster"> </figure>
+            <figure> <img src="images/the hunger.jpeg" alt="Stranger Poster"> </figure>
+            <figure> <img src="images/twilight.jpeg" alt="Stranger Poster"> </figure>
+        </div>
+    </section>
+
+    <section class="review-grid">
+        <hr> <h1>My Reviews</h1> <hr>
+    <div class="review-cards">
+        <div class="review-card" style="width: 500px; height: 400px;">
+            <div class="review-header">
+                <img src="images/interstellar.jpeg" style="width: 150px; height: 180px;" class="review-photo">
+                <div>
+                    <div class="review-name"> Interstellar </div>
+                    <div class="review-date">September 2024</div>
+                </div>
+            </div>
+            <div class="review-text">
+                "Matthew McConaughey delivers a powerful performance as Cooper,
+                a pilot and father torn between his love for his family and his duty to save humanity.
+                The supporting cast, including Anne Hathaway, Jessica Chastain, and Michael Caine,
+                also bring depth and complexity to their roles."
+            </div>
+            <div class="rating">
+                <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+            </div>
+        </div>
+
+        <div class="review-card" style="width: 500px; height: 400px;">
+            <div class="review-header">
+                <img src="images/sherlock.jpeg" style="width: 150px; height: 180px;" class="review-photo">
+                <div>
+                    <div class="review-name"> Sherlock </div>
+                    <div class="review-date">June 2024</div>
+                </div>
+            </div>
+            <div class="review-text">
+                "Sherlock is a brilliant reimagining of Sir Arthur Conan Doyle's classic detective stories, set in the modern day, and it is nothing short of a masterpiece. With its sharp writing, complex characters, and stunning performances, this series has redefined the detective genre for a new generation."
+            </div>
+            <div class="rating">
+                <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+            </div>
+        </div>
+
+        <div class="review-card" style="width: 500px; height: 400px;">
+            <div class="review-header">
+                <img src="images/the hunger.jpeg" style="width: 150px; height: 180px;" class="review-photo">
+                <div>
+                    <div class="review-name"> The Hunger Games </div>
+                    <div class="review-date">April 2024</div>
+                </div>
+            </div>
+            <div class="review-text">
+                "Beyond its gripping narrative, The Hunger Games serves as a poignant commentary on societal issues like inequality, media manipulation, and the human cost of conflict. It’s a story that makes you think long after the credits roll, challenging viewers to reflect on the world around them."
+            </div>
+            <div class="rating">
+                <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+            </div>
+        </div>
+</div>
+    </section>
+    <section id="subscription">
+        <h2>Subscription</h2>
+        <p>Subscribe now to watch movies and series without ads for just <strong>$100/month</strong>.</p>
+        <button class="popup-btn" onclick="playSound(); openForm()">Subscribe</button>
+        <audio id="clickSound" src="sounds/click-sound.mp3" preload="auto"></audio>
+    </section>
+
+    <div id="popupOverlay" onclick="closeForm()"></div>
+
+    <div id="popupForm">
+        <button class="close-btn" onclick="closeForm()">X</button>
+        <h2>Subscription Form</h2>
+        <form>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="plan">Select Plan:</label><br>
+            <select id="plan" name="plan">
+                <option value="monthly">Monthly - $100/month</option>
+                <option value="yearly">Yearly - $900/year</option>
+            </select><br><br>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms and conditions</label><br><br>
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
+
+</main>
+
+<div id="current-date-time" style="text-align: center; margin-top: 20px; font-size: 1.2em; color: #d8b4ff;">
+    Current Date and Time: <span id="date-time"></span>
+</div>
+
+
+<footer>
+    <p>Created by Yelnura Akhmetova, Andrey Shevchenko 2024</p>
+</footer>
+<script src="scripts.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const user = JSON.parse(localStorage.getItem('user'));
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+        if (isLoggedIn && user) {
+            document.getElementById('user-name').textContent = user.name;
+            document.getElementById('user-email').textContent = user.email;
+        } else {
+            alert("Please log in to view your profile.");
+            window.location.href = "login.html";
+        }
+    });
+</script>
+</body>
+</html>

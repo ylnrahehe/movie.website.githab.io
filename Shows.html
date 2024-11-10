@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Series and Shows</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Home.html">Movies</a>
+            <a class="nav-link" href="Shows.html">Shows</a>
+            <a class="nav-link" href="login.html">Login</a>
+            <a class="nav-link" href="Profile.html">Profile</a>
+            <button id="theme-toggle" class="theme-toggle">Light/Dark Mode</button>
+        </div>
+    </nav>
+
+</header>
+
+<section>
+    <hr> <h2> Trending Now</h2> <hr>
+    <div class="carousel carousel-top">
+        <figure><img src="images/sherlock.jpeg" alt="sherlock"></figure>
+        <figure><img src="images/stranger things.jpeg" alt="stranger things"></figure>
+        <figure><img src="images/friends.jpeg" alt="friends"></figure>
+        <figure><img src="images/avatar.jpeg" alt="avatar"></figure>
+        <figure><img src="images/walking.jpeg" alt="walking"></figure>
+        <figure><img src="images/money.jpeg" alt="money heist"></figure>
+        <figure><img src="images/peaky.jpeg" alt="peaky blinders"></figure>
+        <figure><img src="images/wed.jpeg" alt="wednesday"></figure>
+        <figure><img src="images/game.jpeg" alt="game of thrones"></figure>
+    </div>
+</section>
+
+<section class="new-grid">
+
+    <h2>Upcoming Shows/Series</h2>
+    <div class="new-cards">
+        <div class="new-card" style="width: 500px; height: 400px;">
+            <div class="new-header">
+                <img src="images/spongebob.jpeg" style="width: 150px; height: 180px;" class="new-photo">
+                <div>
+                    <div class="new-name"> Spongebob </div>
+                    <div class="new-date"> JULY 1999 </div>
+                </div>
+            </div>
+            <div class="new-text">
+                "is an American animated television series created by marine science educator and animator
+                Stephen Hillenburg that first aired on Nickelodeon as a sneak peek after the 1999 Kids' Choice Awards on May 1, 1999,
+                and officially premiered on July 17, 1999."
+            </div>
+        </div>
+
+        <div class="new-card" style="width: 500px; height: 400px;">
+            <div class="new-header">
+                <img src="images/gravity.jpeg" style="width: 150px; height: 180px;" class="new-photo">
+                <div>
+                    <div class="new-name"> Gravity Falls </div>
+                    <div class="new-date">June 2024</div>
+                </div>
+            </div>
+            <div class="new-text">
+                "is an American mystery comedy animated television series created by Alex Hirsch for Disney Channel and Disney XD.
+                The series follows the adventures of Dipper Pines (Jason Ritter) and his twin sister Mabel (Kristen Schaal),
+                who are sent to spend the summer with their great-uncle (or "Grunkle") Stan (Hirsch) in Gravity Falls, Oregon,
+                a mysterious town full of paranormal incidents and supernatural creatures."
+            </div>
+        </div>
+
+        <div class="new-card" style="width: 500px; height: 400px;">
+            <div class="new-header">
+                <img src="images/simp.jpeg" style="width: 150px; height: 180px;" class="new-photo">
+                <div>
+                    <div class="new-name"> The Simpsons </div>
+                    <div class="new-date">April 2024</div>
+                </div>
+            </div>
+            <div class="new-text">
+                "is an American animated sitcom created by Matt Groening for the Fox Broadcasting Company.
+                Developed by Groening, James L. Brooks,
+                and Sam Simon, the series is a satirical depiction of American life,
+                epitomized by the Simpson family, which consists of Homer, Marge, Bart, Lisa, and Maggie."
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="current-date-time" style="text-align: center; margin-top: 20px; font-size: 1.2em; color: #d8b4ff;">
+    Current Date and Time: <span id="date-time"></span>
+</div>
+
+
+<footer>
+    <p>Created by Yelnura Akhmetova, Andrey Shevchenko 2024</p>
+</footer>
+<script src="scripts.js"></script>
+
+</body>
+</html>

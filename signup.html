@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="Home.html">Movies</a>
+        <a href="Shows.html">Shows</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <button id="theme-toggle" class="theme-toggle">Light/Dark Mode</button>
+    </nav>
+</header>
+
+<main>
+    <h2>Create Your Account</h2>
+    <form id="signupForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="signup-username">Username</label>
+        <input type="text" id="signup-username" required>
+
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" required minlength="6">
+
+        <button type="submit">Sign Up</button>
+    </form>
+</main>
+
+<footer>
+    <p>Created by Yelnura Akhmetova, Andrey Shevchenko, 2024</p>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
